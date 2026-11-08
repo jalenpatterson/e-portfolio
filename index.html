@@ -24,9 +24,9 @@
             <ul class="nav__link--list">
                 <li class="nav__link">
                     <a
-                        href="#languages"
+                        href="#about"
                         class="nav__link--anchor link__hover-effect link__hover-effect--black">
-                        Languages
+                        About
                     </a>
                 </li>
 
@@ -78,10 +78,10 @@
                     <div class="about-me__links">
 
                         <a
-                            href="https://www.linkedin.com/"
+                            href="https://www.linkedin.com/in/jalen-patterson-039601201/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="about-me__link"
+                            class="about-me__link click"
                             aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
@@ -90,15 +90,55 @@
                             href="https://github.com/jalenpatterson"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="about-me__link"
+                            class="about-me__link click"
                             aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
 
                         <a
-                            href="mailto:jalenmp.02@gmail.com"
-                            class="about-me__link"
-                            aria-label="Email">
+                            <div class="modal">
+                                <div class="modal__half modal__about"></div>
+                                <h3 class="modal__title">Here's a bit about me.</h3>
+                                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+                                <p class="modal__para">
+                                I'm a 24 year old dedicated web developer with a strong interest in creating innovative and user-friendly web applications.
+                                <br>
+                                 I currently work on new technologies to make sure I am improving my skills to stay up-to-date with the latest trends in web development.
+                                </p>
+                                <div class="modal__languages">
+                                <figure class="modal__language">
+                                    <img class="modal__language--img"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                                        alt="HTML5"
+                                        class="language__img">
+                                        <span class="language__name">HTML</span>
+                                        <figure class="modal__language">
+                                    <img class="modal__language--img"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                                        alt="HTML5"
+                                        class="language__img">
+                                         <span class="language__name">HTML</span>
+                                </figure>
+                                <figure class="modal__language">
+                                    <img class="modal__language--img"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                                        alt="HTML5"
+                                        class="language__img">
+                                         <span class="language__name">HTML</span>
+                                </figure>
+                                <figure class="modal__language">
+                                    <img class="modal__language--img"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                                        alt="HTML5"
+                                        class="language__img">
+                                         <span class="language__name">HTML</span>
+                                </figure>
+                                </div>
+                                </div>
+                                <div class="modal__half modal__contact">Let's have a chat!</div>
+                            </div>
+                            <div class="about-me__link click"
+                            aria-label="Contact">
                             <i class="far fa-envelope"></i>
                         </a>
 
@@ -106,14 +146,17 @@
                             href="./assets/Example Resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="about-me__link"
+                            class="about-me__link click"
                             aria-label="Resume">
                             <i class="fas fa-file-pdf"></i>
                         </a>
-
                     </div>
                 </div>
+                <a href="#projects" class="scroll">
+                <div class="scroll__icon click">
 
+                </div>
+                </a>
                 <figure class="about-me__img--container">
                     <img
                         src="./assets/undraw_websites.svg"
@@ -127,7 +170,7 @@
 
 
     <!-- Technology Stack -->
-    <section id="languages">
+    <section id="About">
         <div class="container">
             <div class="row">
 
@@ -241,9 +284,7 @@
                     Here are some of my
                     <span class="text--purple">projects</span>
                 </h1>
-
                 <ul class="project">
-
                     <li class="project">
                         <div class="project__wrapper">
 
@@ -268,14 +309,16 @@
                                 <div class="project__description--links">
 
                                     <a
-                                        href="https://jalenpatterson.github.io/final-project-treact/"
+                                        href="https://github.com/jalenpatterson/e-portfolio.git"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         class="project__description--link"
                                         aria-label="View project on GitHub">
                                         <i class="fab fa-github"></i>
                                     </a>
-
+<a href="https://jalenpatterson.github.io/final-project-treact/" class="project__description--link" aria-label="View project">
+                                        <i class="fas fa-link"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -310,14 +353,23 @@
                                 </p>
 
                                 <div class="project__description--links">
+                                    <div class="project__description--links">
 
                                     <a
-                                        href="https://jalenpatterson.github.io/final-project-treact/"
+                                        href="https://github.com/jalenpatterson/Library-.git"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         class="project__description--link"
                                         aria-label="View project on GitHub">
                                         <i class="fab fa-github"></i>
+                                    </a>
+                                    <a
+                                        href="http://127.0.0.1:5502/index.html#library-project"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project__description--link"
+                                        aria-label="View project">
+                                        <i class="fas fa-link"></i>
                                     </a>
 
                                 </div>
@@ -371,7 +423,7 @@
                 <a
                     href="mailto:jalenmp.02@gmail.com"
                     class="footer__social--link link__hover-effect link__hover-effect--white">
-                    Email
+                    Contact
                 </a>
 
                 <a

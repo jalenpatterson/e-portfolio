@@ -20,7 +20,17 @@ body {
     color: #242424;
     background-color: #fff;
 }
+.click {
+    transition: all 300ms ease;
+}
 
+.click:hover { 
+    transform: scale(1.1);
+}
+
+.click:active {
+    transform: scale(0.8);
+}
 h1,
 h2,
 h3,
@@ -31,6 +41,40 @@ h6 {
     line-height: 1.25;
 }
 
+.scroll {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll__icon {
+    width: 20px;
+    height: 30px;
+    border: 2px solid #242424;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll__icon:after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #242424;
+    animation: scroll 1000ms infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(-3px);
+}
+}
 h1 {
     font-size: 36px;
 }
@@ -342,7 +386,32 @@ nav {
         transform: rotate(0deg);
     }
 }
+.link__hover-effect {
+    position:relative;
+}
 
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect--white:after {
+    background-color: #fff;
+}
+
+.link__hover-effect--black:after {
+    background-color: #000;
+}
+
+.link__hover-effect:hover:after {
+    left: 0;
+    width: 100%;
+}
 /* =========================
    TECHNOLOGY STACK
 ========================= */
@@ -410,6 +479,84 @@ nav {
 }
 
 /* =========================
+   MODAL
+======================== */
+.modal {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 90%;
+    max-width: 1100px;
+    height: 700px;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.55);
+    border-radius: 20px;
+    overflow:hidden;
+    display:flex;
+}
+.modal__half {
+    width:50%;
+    padding: 40px 72px;
+}
+
+.modal__about {
+    background-color: rgb(245, 245, 245);
+    display:flex;
+    flex-direction:column;
+}
+
+.modal__languages {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal__language {
+    width: 25%;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__language:hover .language__name {
+    transform: scale(1);
+}
+
+.modal__language:hover {
+    filter: brightness(80%);
+    transform: scale(0.9);
+}
+
+.language__name {
+    position: absolute;
+    bottom: -10px;
+    transform: scale(0);
+    transition: all 300ms ease;
+}
+
+.modal__language--img {
+    width: 100%;
+}
+
+.modal__contact {
+    background-color: #242424;
+    color: white;
+}
+
+.modal__title {
+    font-size: 26px;
+}
+
+.modal__sub-title {
+    margin: 12px 0 24px 0;
+}
+
+.modal__para {
+    margin-bottom: 12px;
+    line-height: 1.75;
+}
+/* =========================
    PROJECTS
 ========================= */
 
@@ -422,6 +569,10 @@ nav {
     margin-bottom: 0;
 }
 
+.project:hover .project__img {
+    transform: scale(1.07);
+    filter: blur(5px);
+}
 .project__wrapper {
     position: relative;
 
@@ -461,11 +612,6 @@ nav {
 
 .project:hover .project__wrapper::before {
     opacity: 0.82;
-}
-
-.project:hover .project__img {
-    transform: scale(1.05);
-    filter: blur(3px);
 }
 
 .project__description {
